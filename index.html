@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flutter Lab Exam – Simple Codes (Sets 10 to 17)</title>
+  <meta name="description" content="Quick reference and clean, concise Flutter code solutions for Lab Exam Sets 10 to 17. All under 51 lines.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Prism.js for syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Hero -->
+  <header class="hero-header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2L3 13l7 7 11-11-7-7z" fill="rgba(2, 125, 253, 0.2)" stroke="#027DFD"></path>
+            <path d="M14 2l7 7-6 6" stroke="#00C9FF"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>Flutter Lab Exam <span class="badge-accent">Sets 10 – 17</span></h1>
+          <p class="subtitle">Minimalist, exam-ready Flutter codes • Kept under 51 lines each</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://github.com/FR8ST7/flutterlabexam" target="_blank" rel="noopener" class="btn btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <button id="themeToggle" class="btn btn-icon" title="Toggle Theme" aria-label="Toggle Theme">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="layout-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-sticky">
+        <div class="search-box">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search sets or keywords..." aria-label="Search sets">
+          <button id="clearSearch" class="clear-search-btn" title="Clear search" style="display: none;">&times;</button>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#quickstart" class="nav-item">
+            <span class="nav-num">⚡</span>
+            <span class="nav-title">Quick Commands</span>
+          </a>
+          <a href="#set10" class="nav-item">
+            <span class="nav-num">10</span>
+            <span class="nav-title">Hospital Dashboard</span>
+          </a>
+          <a href="#set11" class="nav-item">
+            <span class="nav-num">11</span>
+            <span class="nav-title">Restaurant Menu</span>
+          </a>
+          <a href="#set12" class="nav-item">
+            <span class="nav-num">12</span>
+            <span class="nav-title">Library Registration</span>
+          </a>
+          <a href="#set13" class="nav-item">
+            <span class="nav-num">13</span>
+            <span class="nav-title">Tourism Gallery</span>
+          </a>
+          <a href="#set14" class="nav-item">
+            <span class="nav-num">14</span>
+            <span class="nav-title">Stationery Shop</span>
+          </a>
+          <a href="#set15" class="nav-item">
+            <span class="nav-num">15</span>
+            <span class="nav-title">Traffic Signal</span>
+          </a>
+          <a href="#set16" class="nav-item">
+            <span class="nav-num">16</span>
+            <span class="nav-title">Employee Record</span>
+          </a>
+          <a href="#set17" class="nav-item">
+            <span class="nav-num">17</span>
+            <span class="nav-title">Placement Portal</span>
+          </a>
+        </nav>
+
+        <div class="quick-file-download">
+          <a href="flutter_sets_10_to_17_simple_codes.txt" download class="btn btn-outline btn-block">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download Raw TXT</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Stream -->
+    <main class="content-area">
+      <!-- Quickstart Section -->
+      <section id="quickstart" class="card card-hero">
+        <div class="card-header">
+          <div class="card-badge badge-primary">⚡ Workflow</div>
+          <h2>Essential Exam Commands</h2>
+        </div>
+        <p class="card-desc">Standard workflow for every practical set. Copy and paste into your terminal:</p>
+        <div class="code-container">
+          <div class="code-header">
+            <span class="code-lang">BASH</span>
+            <button class="copy-btn" data-copy-target="code-quickstart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy</span>
+            </button>
+          </div>
+          <pre><code id="code-quickstart" class="language-bash">flutter create project_name
+cd project_name
+code .
+flutter run
+flutter run -d chrome</code></pre>
+        </div>
+      </section>
+
+      <!-- SET 10 -->
+      <article id="set10" class="card set-card" data-set="10" data-tags="hospital patient dashboard column container card listtile icons">
+        <div class="card-header">
+          <div class="set-meta">
+            <span class="set-pill">SET 10</span>
+            <div class="tags">
+              <span class="tag">Column</span>
+              <span class="tag">Container</span>
+              <span class="tag">Card</span>
+              <span class="tag">Icons</span>
+            </div>
+          </div>
+          <h2>Hospital Patient Information Dashboard</h2>
+        </div>
+        <p class="card-desc">Displays a patient dashboard with name, ID, age inside a styled Container, medical icons, and assigned doctor/room information in Cards.</p>
+        
+        <div class="code-container">
+          <div class="code-header">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="file-path">lib/main.dart • 40 lines</span>
+            <button class="copy-btn" data-copy-target="code-set10">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Code</span>
+            </button>
+          </div>
+          <pre><code id="code-set10" class="language-dart">import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(home: Scaffold(
+  appBar: AppBar(title: Text("Patient Dashboard")),
+  body: Column(children: [
+    Text("Patient Information", style: TextStyle(fontSize: 24)),
+    Text("Welcome to Hospital Dashboard"),
+    Container(
+      margin: EdgeInsets.all(10), padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(color: Colors.blue[100],
+        borderRadius: BorderRadius.circular(10)),
+      child: Column(children: [
+        Text("Patient Name: Arun"),
+        Text("Patient ID: P101"),
+        Text("Age: 35"),
+      ]),
+    ),
+    Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+      Icon(Icons.person), Icon(Icons.medical_services),
+      Icon(Icons.local_hospital),
+    ]),
+    Card(child: ListTile(title: Text("Assigned Doctor"),
+      subtitle: Text("Dr. Kumar"))),
+    Card(child: ListTile(title: Text("Room Number"),
+      subtitle: Text("205"))),
+  ]),
+)));</code></pre>
+        </div>
+      </article>
+
+      <!-- SET 11 -->
+      <article id="set11" class="card set-card" data-set="11" data-tags="restaurant menu responsive layoutbuilder card expanded row column">
+        <div class="card-header">
+          <div class="set-meta">
+            <span class="set-pill">SET 11</span>
+            <div class="tags">
+              <span class="tag">LayoutBuilder</span>
+              <span class="tag">Responsive</span>
+              <span class="tag">Expanded</span>
+              <span class="tag">Row / Column</span>
+            </div>
+          </div>
+          <h2>Responsive Restaurant Menu</h2>
+        </div>
+        <p class="card-desc">Uses <code>LayoutBuilder</code> to switch between a vertical <code>Column</code> on mobile (&lt;600px) and a horizontal <code>Row</code> with <code>Expanded</code> on larger screens.</p>
+
+        <div class="code-container">
+          <div class="code-header">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="file-path">lib/main.dart • 25 lines</span>
+            <button class="copy-btn" data-copy-target="code-set11">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Code</span>
+            </button>
+          </div>
+          <pre><code id="code-set11" class="language-dart">import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(home: Scaffold(
+  appBar: AppBar(title: Text("Restaurant Menu")),
+  body: LayoutBuilder(builder: (context, c) {
+    var burger = Card(child: ListTile(
+      title: Text("Burger"), subtitle: Text("Rs.120")));
+    var pizza = Card(child: ListTile(
+      title: Text("Pizza"), subtitle: Text("Rs.200")));
+    var sandwich = Card(child: ListTile(
+      title: Text("Sandwich"), subtitle: Text("Rs.80")));
+    if (c.maxWidth < 600) {
+      return Column(children: [burger, pizza, sandwich]);
+    }
+    return Row(children: [
+      Expanded(child: burger), Expanded(child: pizza),
+      Expanded(child: sandwich),
+    ]);
+  }),
+)));</code></pre>
+        </div>
+      </article>
+
+      <!-- SET 12 -->
+      <article id="set12" class="card set-card" data-set="12" data-tags="library registration form validation globalkey textformfield snackbar">
+        <div class="card-header">
+          <div class="set-meta">
+            <span class="set-pill">SET 12</span>
+            <div class="tags">
+              <span class="tag">Form</span>
+              <span class="tag">GlobalKey&lt;FormState&gt;</span>
+              <span class="tag">TextFormField</span>
+              <span class="tag">SnackBar</span>
+            </div>
+          </div>
+          <h2>Library Membership Registration</h2>
+        </div>
+        <p class="card-desc">Interactive form handling user inputs (Name, Register No, Email) with field validation and feedback via <code>ScaffoldMessenger SnackBar</code>.</p>
+
+        <div class="code-container">
+          <div class="code-header">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="file-path">lib/main.dart • 28 lines</span>
+            <button class="copy-btn" data-copy-target="code-set12">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Code</span>
+            </button>
+          </div>
+          <pre><code id="code-set12" class="language-dart">import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(home: Home()));
+
+class Home extends StatelessWidget {
+  final formKey = GlobalKey<FormState>();
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    appBar: AppBar(title: Text("Library Registration")),
+    body: Padding(padding: EdgeInsets.all(15),
+      child: Form(key: formKey, child: Column(children: [
+        TextFormField(decoration: InputDecoration(labelText: "Name"),
+          validator: (v) => v!.isEmpty ? "Enter name" : null),
+        TextFormField(decoration: InputDecoration(labelText: "Register No"),
+          validator: (v) => v!.isEmpty ? "Enter number" : null),
+        TextFormField(decoration: InputDecoration(labelText: "Email"),
+          validator: (v) => v!.isEmpty ? "Enter email" : null),
+        ElevatedButton(child: Text("Register"), onPressed: () {
+          if (formKey.currentState!.validate()) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text("Membership Registered Successfully")));
+          }
+        }),
+      ])),
+    ),
+  );
+}</code></pre>
+        </div>
+      </article>
+
+      <!-- SET 13 -->
+      <article id="set13" class="card set-card" data-set="13" data-tags="tourism gallery gridview assets images pubspec card">
+        <div class="card-header">
+          <div class="set-meta">
+            <span class="set-pill">SET 13</span>
+            <div class="tags">
+              <span class="tag">GridView.count</span>
+              <span class="tag">Image.asset</span>
+              <span class="tag">Assets</span>
+              <span class="tag">Card</span>
+            </div>
+          </div>
+          <h2>Tamil Nadu Tourist Places Gallery</h2>
+        </div>
+        <p class="card-desc">Displays a 2-column image gallery using <code>GridView.count</code> and bundled assets for Ooty, Kodaikanal, and Kanyakumari.</p>
+
+        <!-- Callout box for Asset Setup -->
+        <div class="callout callout-info">
+          <div class="callout-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>Asset Configuration Steps</span>
+          </div>
+          <ol>
+            <li>Create folder <code>assets/images/</code> in the root of your project.</li>
+            <li>Place image files: <code>ooty.jpg</code>, <code>kodaikanal.jpg</code>, <code>kanyakumari.jpg</code>.</li>
+            <li>Add to <code>pubspec.yaml</code> under <code>flutter:</code>:
+              <pre class="inline-code-block"><code>assets:
+  - assets/images/</code></pre>
+            </li>
+            <li>Run <code>flutter pub get</code>.</li>
+          </ol>
+        </div>
+
+        <div class="code-container">
+          <div class="code-header">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="file-path">lib/main.dart • 25 lines</span>
+            <button class="copy-btn" data-copy-target="code-set13">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Code</span>
+            </button>
+          </div>
+          <pre><code id="code-set13" class="language-dart">import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(home: Scaffold(
+  appBar: AppBar(title: Text("Tamil Nadu Tourism Gallery")),
+  body: GridView.count(
+    crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10,
+    children: [
+      place("Ooty", "assets/images/ooty.jpg"),
+      place("Kodaikanal", "assets/images/kodaikanal.jpg"),
+      place("Kanyakumari", "assets/images/kanyakumari.jpg"),
+    ],
+  ),
+)));
+
+Widget place(String name, String image) => Card(child: Column(
+  children: [
+    Expanded(child: Image.asset(image, width: double.infinity,
+      fit: BoxFit.cover)),
+    Text(name),
+  ],
+));</code></pre>
+        </div>
+      </article>
+
+      <!-- SET 14 -->
+      <article id="set14" class="card set-card" data-set="14" data-tags="stationery shopping navigator materialpageroute multi screen push pop">
+        <div class="card-header">
+          <div class="set-meta">
+            <span class="set-pill">SET 14</span>
+            <div class="tags">
+              <span class="tag">Navigator.push</span>
+              <span class="tag">Navigator.pop</span>
+              <span class="tag">Multi-screen</span>
+              <span class="tag">MaterialPageRoute</span>
+            </div>
+          </div>
+          <h2>Stationery Shopping App</h2>
+        </div>
+        <p class="card-desc">Multi-screen routing between Home and Products screens using <code>Navigator.push()</code> and <code>Navigator.pop()</code>.</p>
+
+        <div class="code-container">
+          <div class="code-header">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="file-path">lib/main.dart • 34 lines</span>
+            <button class="copy-btn" data-copy-target="code-set14">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Code</span>
+            </button>
+          </div>
+          <pre><code id="code-set14" class="language-dart">import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(home: Home()));
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    appBar: AppBar(title: Text("Stationery Shop")),
+    body: Center(child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text("Welcome to Stationery Shop"),
+        ElevatedButton(child: Text("View Products"), onPressed: () {
+          Navigator.push(context,
+            MaterialPageRoute(builder: (context) => Products()));
+        }),
+      ],
+    )),
+  );
+}
+
+class Products extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    appBar: AppBar(title: Text("Product Details")),
+    body: Column(children: [
+      Text("Notebook - Rs.50"),
+      Text("Pen - Rs.10"),
+      Text("Pencil - Rs.5"),
+      ElevatedButton(child: Text("Back"),
+        onPressed: () => Navigator.pop(context)),
+    ]),
+  );
+}</code></pre>
+        </div>
+      </article>
+
+      <!-- SET 15 -->
+      <article id="set15" class="card set-card" data-set="15" data-tags="traffic signal animation animatedcontainer setstate implicit animation">
+        <div class="card-header">
+          <div class="set-meta">
+            <span class="set-pill">SET 15</span>
+            <div class="tags">
+              <span class="tag">AnimatedContainer</span>
+              <span class="tag">StatefulWidget</span>
+              <span class="tag">Animation</span>
+              <span class="tag">setState</span>
+            </div>
+          </div>
+          <h2>Traffic Signal Animation</h2>
+        </div>
+        <p class="card-desc">Demonstrates Flutter's implicit animations using <code>AnimatedContainer</code> that animates size and color transitions between STOP (Red) and GO (Green).</p>
+
+        <div class="code-container">
+          <div class="code-header">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="file-path">lib/main.dart • 32 lines</span>
+            <button class="copy-btn" data-copy-target="code-set15">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Code</span>
+            </button>
+          </div>
+          <pre><code id="code-set15" class="language-dart">import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(home: Home()));
+
+class Home extends StatefulWidget {
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  bool green = false;
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    appBar: AppBar(title: Text("Traffic Signal Animation")),
+    body: Center(child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        AnimatedContainer(
+          duration: Duration(seconds: 1),
+          width: green ? 200 : 150, height: green ? 200 : 150,
+          color: green ? Colors.green : Colors.red),
+        Text(green ? "GO" : "STOP"),
+        ElevatedButton(child: Text("Change Signal"), onPressed: () {
+          setState(() => green = !green);
+        }),
+      ],
+    )),
+  );
+}</code></pre>
+        </div>
+      </article>
+
+      <!-- SET 16 -->
+      <article id="set16" class="card set-card" data-set="16" data-tags="employee record manager json serialization tojson fromjson model listview">
+        <div class="card-header">
+          <div class="set-meta">
+            <span class="set-pill">SET 16</span>
+            <div class="tags">
+              <span class="tag">JSON Model</span>
+              <span class="tag">toJson / fromJson</span>
+              <span class="tag">ListView.builder</span>
+              <span class="tag">State Management</span>
+            </div>
+          </div>
+          <h2>Employee Record Manager</h2>
+        </div>
+        <p class="card-desc">Implements a custom Dart data model class with JSON serialization (<code>toJson()</code> and <code>fromJson()</code>) and updates dynamic records in a <code>ListView.builder</code>.</p>
+
+        <div class="code-container">
+          <div class="code-header">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="file-path">lib/main.dart • 41 lines</span>
+            <button class="copy-btn" data-copy-target="code-set16">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Code</span>
+            </button>
+          </div>
+          <pre><code id="code-set16" class="language-dart">import 'package:flutter/material.dart';
+
+class Employee {
+  int id;
+  String name, department;
+  Employee(this.id, this.name, this.department);
+
+  Map<String, dynamic> toJson() =>
+      {"id": id, "name": name, "department": department};
+
+  factory Employee.fromJson(Map<String, dynamic> json) =>
+      Employee(json["id"], json["name"], json["department"]);
+}
+
+void main() => runApp(MaterialApp(home: Home()));
+
+class Home extends StatefulWidget {
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  Employee emp = Employee(201, "Ravi", "IT");
+  List<String> names = [];
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    appBar: AppBar(title: Text("Employee Record Manager")),
+    body: Column(children: [
+      Text("ID: 201  Name: Ravi  Department: IT"),
+      ElevatedButton(child: Text("Add Employee"), onPressed: () {
+        setState(() => names.add(emp.name));
+      }),
+      Text("JSON: ${emp.toJson()}"),
+      Expanded(child: ListView.builder(
+        itemCount: names.length,
+        itemBuilder: (context, i) => ListTile(title: Text(names[i])))),
+    ]),
+  );
+}</code></pre>
+        </div>
+      </article>
+
+      <!-- SET 17 -->
+      <article id="set17" class="card set-card" data-set="17" data-tags="college placement cell web application responsive layoutbuilder web chrome">
+        <div class="card-header">
+          <div class="set-meta">
+            <span class="set-pill">SET 17</span>
+            <div class="tags">
+              <span class="tag">Flutter Web</span>
+              <span class="tag">LayoutBuilder</span>
+              <span class="tag">Responsive Web</span>
+              <span class="tag">Conditional Rendering</span>
+            </div>
+          </div>
+          <h2>College Placement Cell Web Application</h2>
+        </div>
+        <p class="card-desc">Interactive Flutter Web app demonstrating responsive layouts adapting between Mobile and Desktop displays with conditional recruitment details.</p>
+
+        <!-- Callout box for Web Commands -->
+        <div class="callout callout-warning">
+          <div class="callout-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            <span>Web Setup &amp; Execution Commands</span>
+          </div>
+          <pre class="inline-code-block"><code>flutter config --enable-web
+flutter devices
+flutter run -d chrome
+flutter build web</code></pre>
+        </div>
+
+        <div class="code-container">
+          <div class="code-header">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="file-path">lib/main.dart • 28 lines</span>
+            <button class="copy-btn" data-copy-target="code-set17">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Code</span>
+            </button>
+          </div>
+          <pre><code id="code-set17" class="language-dart">import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(home: Home()));
+
+class Home extends StatefulWidget {
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  bool show = false;
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    appBar: AppBar(title: Text("Placement Cell Portal")),
+    body: Column(children: [
+      Text("Welcome to College Placement Cell"),
+      ElevatedButton(child: Text("View Placement Details"),
+        onPressed: () => setState(() => show = true)),
+      if (show) Text("Campus Recruitment 2026"),
+      Expanded(child: LayoutBuilder(builder: (context, c) => Center(
+        child: Text(c.maxWidth < 600
+          ? "Mobile Web Layout" : "Desktop Web Layout")))),
+    ]),
+  );
+}</code></pre>
+        </div>
+      </article>
+
+      <!-- No search results fallback -->
+      <div id="noResults" class="no-results" style="display: none;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+          <line x1="8" y1="11" x2="14" y2="11"></line>
+        </svg>
+        <h3>No matching Flutter set found</h3>
+        <p>Try searching for a set number (e.g. "12") or keywords like "Responsive", "Animation", "Form", or "GridView".</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">✓ Copied to clipboard!</div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
